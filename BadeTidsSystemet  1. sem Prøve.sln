@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32106.194
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BadeTidsSystemet  1. sem Prøve", "BadeTidsSystemet  1. sem Prøve\BadeTidsSystemet  1. sem Prøve.csproj", "{9999011B-AD94-4C91-AE7F-FC89EB5828CF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9999011B-AD94-4C91-AE7F-FC89EB5828CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9999011B-AD94-4C91-AE7F-FC89EB5828CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9999011B-AD94-4C91-AE7F-FC89EB5828CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9999011B-AD94-4C91-AE7F-FC89EB5828CF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {443C2851-5385-4FD8-899B-1EE3074A1A71}
+	EndGlobalSection
+EndGlobal
