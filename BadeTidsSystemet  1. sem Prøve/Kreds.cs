@@ -28,7 +28,11 @@ namespace BadeTidsSystemet__1._sem_Prøve
         public string Id { get; set; }
         public string Navn { get; set; }
         public string Adresse { get; set; }
-        public int Deltagere { get; set; }
+        public int Deltagere
+        {
+            get; set;
+        }
+        
 
         public override string ToString()
         {

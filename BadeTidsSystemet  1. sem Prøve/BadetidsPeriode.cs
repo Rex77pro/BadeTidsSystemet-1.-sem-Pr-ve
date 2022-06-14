@@ -11,15 +11,15 @@ namespace BadeTidsSystemet__1._sem_Prøve
         //StartTidspunkt DateTime Default er new DateTime()
         //SlutTidspunkt DateTime Default er new DateTime()
 
-        private string _type;
-        private DayOfWeek _ugeDag;
-        private DateTime _startTidspunkt;
-        private DateTime _slutTidsPunkt;
+        public string _type;
+        public DayOfWeek _ugeDag;
+        public DateTime _startTidspunkt;
+        public DateTime _slutTidsPunkt;
        
 
         public BadetidsPeriode(string Type, DayOfWeek UgeDag, DateTime Start, DateTime Slut)
         {
-            _type = Type;
+            this.Type = Type;
             _ugeDag = UgeDag;
             _startTidspunkt = Start;
             _slutTidsPunkt = Slut;
@@ -31,10 +31,34 @@ namespace BadeTidsSystemet__1._sem_Prøve
             
         }
 
-        public string Type { get; set; }
-        public DayOfWeek UgeDag { get; set; }
-        public DateTime Start { get; set; }
-        public DateTime Slut { get; set; }
+        public string Type
+        { get { return _type; } 
+            set {
+                if (value.Length < 4)
+                {
+                    throw new ArgumentException("Minimum 4 tegn");
+                }
+                _type = value;
+            } }
+        public DayOfWeek UgeDag 
+        { get; set; }
+        public DateTime Start
+        {
+            get
+            {
+                return _startTidspunkt;
+            }
+            set 
+            {
+                if (_startTidspunkt > _slutTidsPunkt)
+                {
+                    throw new ArgumentException("StartTidspunktet skal være mindre end Sluttidspunktet");
+                }
+                
+                
+            }
+        }
+        public DateTime Slut { get { return _slutTidsPunkt; } set { _slutTidsPunkt = value; } }
         public Dictionary<string, Kreds> Kredse { get; set; }
 
 

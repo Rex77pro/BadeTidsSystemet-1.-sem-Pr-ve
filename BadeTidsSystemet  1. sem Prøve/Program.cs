@@ -6,21 +6,28 @@ namespace BadeTidsSystemet__1._sem_Prøve
     {
         static void Main(string[] args)
         {
-            BadetidsPeriode b1 = new BadetidsPeriode("Badning", DayOfWeek.Saturday, new DateTime().AddHours(6).AddMinutes(30), new DateTime().AddHours(8).AddMinutes(0));
-            Console.WriteLine(b1);
+            try
+            {
+                BadetidsPeriode b1 = new BadetidsPeriode("Badning", DayOfWeek.Saturday, new DateTime(2022,6,14,6,30,00), new DateTime(2022,6,14,8,00,00));
+                Console.WriteLine(b1);
+                Console.WriteLine();
 
-            Console.WriteLine();
+                b1.AdderKreds("Jun", new Kreds("Jun", "Junior", "Gothersgade 120, København", 32));
+                b1.AdderKreds("Vik", new Kreds("Vik", "Vikinger", "Alfabetsvej 28, ABC 123", 28));
+                Console.WriteLine(b1);
 
-            b1.AdderKreds("Jun", new Kreds("Jun", "Junior", "Gothersgade 120, København", 35));
-            b1.AdderKreds("Vik", new Kreds("Vik", "Vikinger", "Alfabetsvej 28, ABC 123", 28));
-            Console.WriteLine(b1);
+                Console.WriteLine();
 
-            Console.WriteLine();
+                b1.SletKreds("HUP");
+                b1.SletKreds("Vik");
 
-            b1.SletKreds("HUP");
-            b1.SletKreds("Vik");
+                Console.WriteLine(b1);
 
-            Console.WriteLine(b1);
+            }
+            catch (ArgumentException ex)
+            {
+                Console.WriteLine(ex); ;
+            }
 
 
 
